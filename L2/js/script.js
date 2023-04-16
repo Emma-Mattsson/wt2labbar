@@ -1,5 +1,7 @@
 // Globala variabler
-
+inp1Elem = document.getElementById("input1");
+inp2Elem = document.getElementById("input2");
+msgElem = document.getElementById("message");
 
 // --------------------------------------------------
 // Initiering av globala variabler och händelsehanterare
