@@ -58,7 +58,7 @@ function getUrl(nr){
         case 5: url = "img/pineapple.png"; break;
         
         default: url = "img/nofruit.png"; break;
-    }
+    } //Slut switch
     return url;
 } //Slut getUrl
 
