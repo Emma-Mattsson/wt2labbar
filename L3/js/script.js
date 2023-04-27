@@ -93,8 +93,8 @@ function guessLetter(){
     correctLettersCount = 0;
 
     for(let i = 0; i < selectedWord.length; i++){ //Går igenom alla tecken i selectedWord
-        if (selectedWord.charAt(i) == letter){
-            document.getElementById("letterBoxes").innerHTML += "<span>" + letter + "</span>";
+        if (selectedWord.charAt(i) === letter){
+            letterBoxes[i].innerHTML = letter;
             
             letterFound = true;
         } 
