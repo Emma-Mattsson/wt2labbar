@@ -64,17 +64,19 @@ function startGame() {
 	let words = [];
 
 	for (let i = 0; i < 4; i++) { //En loop som genomgår 4 gånger, väljer 4 slumpmässiga ord
-		let r = Math.floor(tempNrs.length * Math.random())+1; //Väljer ut ett slumpmässigt indexnummer från  tempNrs-arrayen
+		let r = Math.floor(tempNrs.length * Math.random()); //Väljer ut ett slumpmässigt indexnummer från  tempNrs-arrayen
 		let ix = tempNrs[r]; //Sparar det utvalda slumpmässiga numret i variabeln ix
 		words.push(allWords[ix]);
 		imgElems[i].src = "img/" + ix + ".jpg";
-		tempNrs.splice(r, 1);
 		imgElems[i].id = ix;
+		tempNrs.splice(r, 1);
 	}
 
 	for (let i = 0; i  < 4; i++) { //Ytterligare en loop som väljer 4 nya ord ur tempNrs
-		let index = Math.floor(tempNrs.length * Math.random())+1; //Väljer ut ett slumpmässigt indexnummer från  tempNrs-arrayen
-		words.push(allWords[index]);
+		let r = Math.floor(tempNrs.length * Math.random()); //Väljer ut ett slumpmässigt indexnummer från  tempNrs-arrayen
+		let ix = tempNrs[r]; //Sparar det utvalda slumpmässiga numret i variabeln ix
+		words.push(allWords[ix]);
+		tempNrs.splice(r, 1);
 	}
 
 	words.sort();
