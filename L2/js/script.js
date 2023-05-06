@@ -73,8 +73,8 @@ function addFruits(){
     }
     
     //Kod för att visa bilder
-    let imgList = "";
-    let fruitUrl = getUrl(selFruitNr);
+    let imgList = ""; //Tom strängvariabel
+    let fruitUrl = getUrl(selFruitNr); //Hämtar url till bilderna och sparar resultatet i variabeln fruitUrl
     
     for (let i = 0; i < amount; i++){
         imgList += "<img src='" + fruitUrl + "'alt='frukt'>";
